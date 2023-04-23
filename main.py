@@ -19,6 +19,17 @@ def switch_variables():
     print("b = " + b)
 
 
-# length_user_input()
-switch_variables()
+def hello_world():
 
+    word = "Hello world"
+    length = len(word)
+    position = 0
+
+    while position < length:
+        print(word[position])
+        position += 1
+
+
+# length_user_input()
+# switch_variables()
+# hello_world()
