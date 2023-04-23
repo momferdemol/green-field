@@ -76,7 +76,7 @@ def split_and_tip_calculator():
     bill_with_tip = bill + tip
     result_per_person = round(bill_with_tip / split, 2)
 
-    message = f"Each person should pay: ${result_per_person}\n"
+    message = f"Each person should pay: ${'{:.2f}'.format(result_per_person)}\n"
     print(message)
 
 
@@ -86,4 +86,4 @@ def split_and_tip_calculator():
 # split_and_add_number()
 # body_mass_index()
 # what_is_left()
-# split_and_tip_calculator()
+split_and_tip_calculator()
