@@ -50,8 +50,21 @@ def body_mass_index():
 
     print(f"Your body mass index is {body_mass_index}")
 
+
+def what_is_left():
+
+    age = input("What is your current age? ")
+
+    year_left = 90 - int(age)
+    months = year_left * 12
+    weeks = year_left * 52
+    days = year_left * 365
+
+    print(f"You have {days} days, {weeks} weeks, and {months} months left.")
+
 # length_user_input()
 # switch_variables()
 # hello_world()
 # split_and_add_number()
-body_mass_index()
+# body_mass_index()
+what_is_left()
