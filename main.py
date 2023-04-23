@@ -30,6 +30,17 @@ def hello_world():
         position += 1
 
 
+def split_and_add_number():
+
+    number = input("hi there! Give me a two digit number please.\n")
+    num_1 = number[0]
+    num_2 = number[1]
+
+    calculation = int(num_1) + int(num_2)
+
+    print(f"That will be {calculation}\n")
+
 # length_user_input()
 # switch_variables()
 # hello_world()
+split_and_add_number()
