@@ -40,7 +40,18 @@ def split_and_add_number():
 
     print(f"That will be {calculation}\n")
 
+
+def body_mass_index():
+
+    height = float(input("Enter your height in m: "))
+    weight = float(input("Enter your weight in kg: "))
+
+    body_mass_index = round(weight / height ** 2)
+
+    print(f"Your body mass index is {body_mass_index}")
+
 # length_user_input()
 # switch_variables()
 # hello_world()
-split_and_add_number()
+# split_and_add_number()
+body_mass_index()
