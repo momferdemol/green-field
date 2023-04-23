@@ -1,3 +1,4 @@
+from art import tprint
 
 def length_user_input():
 
@@ -62,9 +63,27 @@ def what_is_left():
 
     print(f"You have {days} days, {weeks} weeks, and {months} months left.")
 
+
+def split_and_tip_calculator():
+
+    tprint("tip calculator")
+    print("\nWelcome to the tip calculator.\n")
+    bill = float(input("What was the total bill? "))
+    percentage = int(input("What percentage tip would you like to give? 10, 12 or 15? "))
+    split = int(input("How may people to split the bill? "))
+
+    tip = percentage / 100 * bill
+    bill_with_tip = bill + tip
+    result_per_person = round(bill_with_tip / split, 2)
+
+    message = f"Each person should pay: ${result_per_person}\n"
+    print(message)
+
+
 # length_user_input()
 # switch_variables()
 # hello_world()
 # split_and_add_number()
 # body_mass_index()
-what_is_left()
+# what_is_left()
+# split_and_tip_calculator()
