@@ -80,10 +80,22 @@ def split_and_tip_calculator():
     print(message)
 
 
+def odd_or_event():
+
+    number = int(input("Which number do you want to check? "))
+    check = number % 2
+
+    if check == 1:
+        print("This is an odd number.\n")
+    else:
+        print("This is an even number.\n")
+
+
 # length_user_input()
 # switch_variables()
 # hello_world()
 # split_and_add_number()
 # body_mass_index()
 # what_is_left()
-split_and_tip_calculator()
+# split_and_tip_calculator()
+odd_or_event()
