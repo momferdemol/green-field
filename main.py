@@ -91,6 +91,30 @@ def odd_or_event():
         print("This is an even number.\n")
 
 
+def body_mass_index_2():
+
+    height = float(input("Enter your height in m: "))
+    weight = float(input("Enter your weight in kg: "))
+
+    body_mass_index = round(weight / height ** 2)
+
+    if body_mass_index < 18.5:
+        print(f"\nYour body mass index is {body_mass_index}")
+        print("You are underwight. Go and eat something!\n")
+    elif body_mass_index < 25:
+        print(f"\nYour body mass index is {body_mass_index}")
+        print("You have a normal weight. Awesome\n")
+    elif body_mass_index < 30:
+        print(f"\nYour body mass index is {body_mass_index}")
+        print("You are overweight. Stop eating those chips!\n")
+    elif body_mass_index < 35:
+        print(f"\nYour body mass index is {body_mass_index}")
+        print("You are obese! You should think about your health.\n")
+    else:
+        print(f"\nYour body mass index is {body_mass_index}")
+        print("You are clinically obese. Game over.\n")
+
+
 # length_user_input()
 # switch_variables()
 # hello_world()
@@ -98,4 +122,5 @@ def odd_or_event():
 # body_mass_index()
 # what_is_left()
 # split_and_tip_calculator()
-odd_or_event()
+# odd_or_event()
+body_mass_index_2()
