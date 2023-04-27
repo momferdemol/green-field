@@ -290,6 +290,24 @@ def who_pays_bill():
     print(f"\n{payer} is going to pay the bill today! Thank you, come again!\n")
 
 
+def play_with_lists():
+    # create a matrix of lists and ask for which position in the matrix the value needs to change.
+    row1 = ["x","x","x"]
+    row2 = ["x","x","x"]
+    row3 = ["x","x","x"]
+
+    matrix = [row1, row2, row3]
+
+    print(f"\n{row1}\n{row2}\n{row3}\n")
+
+    position = input('Where do you want to place your mark? Specify column and row like "31" or "23" ')
+
+    column = int(position[0]) - 1
+    row = int(position[1]) - 1
+
+    matrix[row][column] = "M"
+
+    print(f"\n{row1}\n{row2}\n{row3}\n")
 
 
 # length_user_input()
@@ -306,3 +324,4 @@ def who_pays_bill():
 # treasure_island()
 # heads_or_tails()
 # who_pays_bill()
+# play_with_lists()
