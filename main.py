@@ -115,6 +115,32 @@ def body_mass_index_2():
         print("You are clinically obese. Game over.\n")
 
 
+def pizza_order():
+
+    tprint("python pizza")
+    size = input("What size pizza do you want? S, M, L: ").upper()
+    add_pepperoni = input("Do you want pepperoni? Y or N: ").upper()
+    extra_cheese = input("Do you want extra cheese? Y or N: ").upper()
+    bill = 0
+
+    if size == "S":
+        bill = 15
+    elif size == "M":
+        bill = 20
+    else:
+        bill = 25
+    
+    if add_pepperoni == "Y":
+        if size == "S":
+            bill += 2
+        else:
+            bill += 3
+
+    if extra_cheese == "Y":
+        bill += 1
+
+    print(f"\nYour final bill is: {bill}.\n")
+
 # length_user_input()
 # switch_variables()
 # hello_world()
@@ -123,4 +149,5 @@ def body_mass_index_2():
 # what_is_left()
 # split_and_tip_calculator()
 # odd_or_event()
-body_mass_index_2()
+# body_mass_index_2()
+pizza_order()
