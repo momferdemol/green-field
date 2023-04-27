@@ -1,14 +1,16 @@
+import random
 from art import tprint
 
-def length_user_input():
 
+def length_user_input():
+    # how many characters in the user input
     user_name = input("What is your name?\n")
     input_length = len(user_name)
     print(f"Hi {user_name}, your name consist of {input_length} characters.\n")
 
 
 def switch_variables():
-
+    # play around with variables, switch values
     a = input("a: ")
     b = input("b: ")
 
@@ -21,7 +23,7 @@ def switch_variables():
 
 
 def hello_world():
-
+    # simple 'hello word' loop
     word = "Hello world"
     length = len(word)
     position = 0
@@ -32,7 +34,7 @@ def hello_world():
 
 
 def split_and_add_number():
-
+    # how to work with positions
     number = input("hi there! Give me a two digit number please.\n")
     num_1 = number[0]
     num_2 = number[1]
@@ -43,7 +45,7 @@ def split_and_add_number():
 
 
 def body_mass_index():
-
+    # BMI calculation
     height = float(input("Enter your height in m: "))
     weight = float(input("Enter your weight in kg: "))
 
@@ -53,7 +55,7 @@ def body_mass_index():
 
 
 def what_is_left():
-
+    # another calculation
     age = input("What is your current age? ")
 
     year_left = 90 - int(age)
@@ -65,7 +67,7 @@ def what_is_left():
 
 
 def split_and_tip_calculator():
-
+    # input some values, calculate, and print
     tprint("tip calculator")
     print("\nWelcome to the tip calculator.\n")
     bill = float(input("What was the total bill? "))
@@ -81,7 +83,7 @@ def split_and_tip_calculator():
 
 
 def odd_or_event():
-
+    # is this an odd or even number
     number = int(input("Which number do you want to check? "))
     check = number % 2
 
@@ -92,7 +94,7 @@ def odd_or_event():
 
 
 def body_mass_index_2():
-
+    # BMI calculation with additional feedback
     height = float(input("Enter your height in m: "))
     weight = float(input("Enter your weight in kg: "))
 
@@ -116,7 +118,7 @@ def body_mass_index_2():
 
 
 def pizza_order():
-
+    # more if statements
     tprint("python pizza")
     size = input("What size pizza do you want? S, M, L: ").upper()
     add_pepperoni = input("Do you want pepperoni? Y or N: ").upper()
@@ -176,7 +178,7 @@ def school_girl_love_calculator():
 
 
 def treasure_island():
-
+    # more complex if statements + I added a while loop
     print('''
         *******************************************************************************
                  |                   |                  |                     |
@@ -263,6 +265,16 @@ def treasure_island():
             game_over = False
 
 
+def heads_or_tails():
+
+    number = random.randint(1, 2)
+
+    if number == 1:
+        print("Coin flip... heads.")
+    else:
+        print("Coin flip.. tails.")
+
+
 # length_user_input()
 # switch_variables()
 # hello_world()
@@ -275,3 +287,4 @@ def treasure_island():
 # pizza_order()
 # school_girl_love_calculator()
 # treasure_island()
+# heads_or_tails()
