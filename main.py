@@ -141,6 +141,40 @@ def pizza_order():
 
     print(f"\nYour final bill is: {bill}.\n")
 
+
+def school_girl_love_calculator():
+
+    tprint("love calculator")
+    name1 = input("What is your name?\n")
+    name2 = input("What is their name?\n")
+
+    combine_name = (name1 + name2).lower()
+
+    # TRUE letter count
+    count_t = combine_name.count("t")
+    count_r = combine_name.count("r")
+    count_u = combine_name.count("u")
+    count_e = combine_name.count("e")
+    true = count_t + count_r + count_u + count_e
+
+    # LOVE letter count
+    count_l = combine_name.count("l")
+    count_o = combine_name.count("o")
+    count_v = combine_name.count("v")
+    count_e = combine_name.count("e")
+    love = count_l + count_o + count_v + count_e
+
+    # Add together as string value (e.g. TRUE=5 and LOVE=3 => score=53)
+    score = int(str(true) + str(love))
+
+    if score < 10 or score >90:
+        print(f"\nYour score is {score}, you go together like coke and mentos.\n")
+    elif score >= 40 and score <= 50:
+        print(f"\nYour score is {score}, you are alright together.\n")
+    else:
+        print(f"\nYour score is {score}.\n")
+
+
 # length_user_input()
 # switch_variables()
 # hello_world()
@@ -150,4 +184,5 @@ def pizza_order():
 # split_and_tip_calculator()
 # odd_or_event()
 # body_mass_index_2()
-pizza_order()
+# pizza_order()
+school_girl_love_calculator()
