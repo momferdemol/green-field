@@ -266,13 +266,30 @@ def treasure_island():
 
 
 def heads_or_tails():
-
+    # how to get a random number
     number = random.randint(1, 2)
 
     if number == 1:
         print("Coin flip... heads.")
     else:
         print("Coin flip.. tails.")
+
+
+def who_pays_bill():
+    # how to play around with random numbers
+    string_of_names = input("\nWho is playing? Type in the names separated by a comma.\n")
+    names = string_of_names.split(",")
+
+    count = len(names) - 1
+    payer = random.randint(0, count)
+
+    print(f"\n{names[payer]} is going to pay the bill today! Thank you, come again!\n")
+
+    # OR use another random function
+    payer = random.choice(names)
+    print(f"\n{payer} is going to pay the bill today! Thank you, come again!\n")
+
+
 
 
 # length_user_input()
@@ -288,3 +305,4 @@ def heads_or_tails():
 # school_girl_love_calculator()
 # treasure_island()
 # heads_or_tails()
+# who_pays_bill()
