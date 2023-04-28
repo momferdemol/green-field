@@ -390,6 +390,41 @@ def highest_score():
     print(f"Highest score: {high_score}\n")
 
 
+def fizz_buzz():
+
+    # loop through numbers from 1 to 100
+    for number in range(1, 101):
+      
+        fizz = number % 3
+        buzz = number % 5
+
+        if (fizz == 0) and (buzz == 0):
+            # is divisable by both 3 and 5 then print FizzBuss
+            print("FizzBuzz")
+        elif fizz == 0:
+            # is divisible by 3 then print Fizz
+            print("Fizz")
+        elif buzz == 0:
+            # is divisable by 5 then print Buzz
+            print("Buzz")
+        else:
+            print(f"{number}")
+
+
+def password_generator():
+
+    letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    numbers = ['0','1','2','3','4','5','6','7','8','9']
+    symbols = ['!','#','$','%','&','(',')','*','+']
+
+    tprint("password generator")
+    print("Welcome to the password generator!")
+    
+    number_of_digits = input("How many digits for you password? e.g. 12, 14, 20\n")
+    number_of_numbers = input("How many numbers do you want to include?\n")
+    number_of_symbols = input("How many symbols do you want to include?\n")
+
+
 # length_user_input()
 # switch_variables()
 # hello_world()
@@ -408,3 +443,4 @@ def highest_score():
 # rock_paper_scissors()
 # average_height()
 # highest_score()
+fizz_buzz()
