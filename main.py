@@ -337,6 +337,26 @@ def rock_paper_scissors():
         else:
             print("You lose.\n")
 
+###############
+#### LOOPS ####
+###############
+
+# for item in list_of_items:
+#   do something for each item
+
+def average_height():
+
+    student_heigths = input("Input a list of student heights, separated by a space.\n").split()
+    heights_total = 0
+
+    for height in range(0, len(student_heigths)):
+        student_heigths[height] = int(student_heigths[height])
+        heights_total += student_heigths[height]
+
+    heights_average = round(heights_total / (height + 1))
+    print(f"\nYour input: {student_heigths}\n")
+    print(f"The average height is: {heights_average}\n")
+
 
 # length_user_input()
 # switch_variables()
@@ -353,4 +373,5 @@ def rock_paper_scissors():
 # heads_or_tails()
 # who_pays_bill()
 # play_with_lists()
-rock_paper_scissors()
+# rock_paper_scissors()
+# average_height()
