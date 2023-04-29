@@ -446,6 +446,10 @@ def password_generator():
     
     print(password)
 
+# while something_is_true:
+# do something until condition is false
+
+
     
 # length_user_input()
 # switch_variables()
