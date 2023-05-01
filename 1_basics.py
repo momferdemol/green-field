@@ -48,3 +48,15 @@ def play_with_lists():
     matrix[row][column] = "M"
 
     print(f"\n{row1}\n{row2}\n{row3}\n")
+
+#----------------------------------------------------
+# FUNCTIONS
+#----------------------------------------------------
+#
+# parameter variable = 123 (value you 'give' the function)
+# 
+# def my_function(parameter_1, parameter_2):
+#   do something
+#   do something & use 'given' value
+#
+#   The value 123 is called an argument
