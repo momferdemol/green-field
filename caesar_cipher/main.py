@@ -1,14 +1,23 @@
 import src.functions as functions
+from art import tprint
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
+tprint("caesar cipher")
+end_program = False
 
-if direction == "encode":
-    functions.encrypt(text, shift)
+while not end_program:
 
-elif direction == "decode":
-    functions.decrypt(text, shift)
-    
-else:
-    print("Please provide the correct command.")
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    shift = shift % 26
+
+    if (direction == "encode") or (direction == "decode"):
+        functions.cipher(text, shift, direction)
+    else:
+        print("Please provide the correct command.")
+
+    run_program = input("Type 'yes' to go again, or 'no' to stop the program.\n")
+
+    if run_program == "no":
+        end_program = True
+        print("thank you, come again!")
