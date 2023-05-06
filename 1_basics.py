@@ -29,6 +29,9 @@ def split_and_add_number():
 
     print(f"That will be {calculation}\n")
 
+#----------------------------------------------------
+# LISTS
+#----------------------------------------------------
 
 def play_with_lists():
     # create a matrix of lists and ask for which position in the matrix the value needs to change.
@@ -60,3 +63,22 @@ def play_with_lists():
 #   do something & use 'given' value
 #
 #   The value 123 is called an argument
+
+#----------------------------------------------------
+# DICTIONARY (+ NESTED)
+#----------------------------------------------------
+# The travel log is a List
+# Each item in the list is a dictionary
+# and 1 key 'cities_visited' within the dictionary has a list value
+travel_log = [
+{
+    "country": "France",
+    "total_visits": 12,
+    "cities_visited": ["Paris", "Lille", "Dijon"]
+},
+{
+    "country": "Germany",
+    "total_visits": 5,
+    "cities_visited": ["Berlin", "Hamburg", "Stuttgart"]
+}
+]
