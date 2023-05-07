@@ -1,95 +1,43 @@
 import src.functions as func
 from art import tprint
-import os, sys
-
-cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-player_cards = []
-dealer_cards = []
-player_score = 0
-dealer_score = 0
-player_is_playing = True
-dealer_is_playing = True
+import os
 
 
-play_game = input("Do you want to play a game of Blackjack? Type 'y' or 'n'. ")
-os.system('cls||clear')
+def play_game():
 
+    player_cards = []
+    dealer_cards = []
+    is_game_over = False
 
-if play_game == "y":
     tprint("blackjack")
-    for i in range(2):
-        player_cards.append(func.deal_card(cards))
-        dealer_cards.append(func.deal_card(cards))
-        player_score = sum(player_cards)
-        dealer_score = sum(dealer_cards)
-    func.print_score(player_cards, player_score, dealer_cards)
-else:
-    sys.exit()
 
+    for _ in range(2):
+        player_cards.append(func.deal_card())
+        dealer_cards.append(func.deal_card())
 
-while player_is_playing:
+    while not is_game_over:
 
-    if player_score == 21:
-        print("\nYou've won")
-        func.print_final_score(player_cards, player_score, dealer_cards, dealer_score)
-        player_is_playing = False
-        dealer_is_playing = False
-    elif dealer_score == 21:
-        print("\nDealer wins")
-        func.print_final_score(player_cards, player_score, dealer_cards, dealer_score)
-        player_is_playing = False
-        dealer_is_playing = False
-    elif player_score > 21:
-        print("\nDealer wins")
-        func.print_final_score(player_cards, player_score, dealer_cards, dealer_score)
-        player_is_playing = False
-        dealer_is_playing = False
-    elif 11 in player_cards:
-        player_score = ((player_score - 11) + 1)
-        if player_score > 21:
-            print("\nDealer wins")
-            func.print_final_score(player_cards, player_score, dealer_cards, dealer_score)
-            player_is_playing = False
-            dealer_is_playing = False
+        player_score = func.calculate_score(player_cards)
+        dealer_score = func.calculate_score(dealer_cards)
+        func.print_score(player_cards, dealer_cards)
+
+        if player_score == 0 or dealer_score == 0 or player_score > 21:
+            is_game_over = True
         else:
             get_card = input("\nType 'y' to get another card, type 'n' to pass: ")
             if get_card == "y":
-                player_cards.append(func.deal_card(cards))
-                player_score = sum(player_cards)
-                func.print_score(player_cards, player_score, dealer_cards)
+                player_cards.append(func.deal_card())
             else:
-                player_is_playing = False
-    else:
-        get_card = input("\nType 'y' to get another card, type 'n' to pass: ")
-        if get_card == "y":
-            player_cards.append(func.deal_card(cards))
-            player_score = sum(player_cards)
-            func.print_score(player_cards, player_score, dealer_cards)
-        else:
-            player_is_playing = False
+                is_game_over = True
+
+    while dealer_score != 0 and dealer_score < 17:
+        dealer_cards.append(func.deal_card())
+        dealer_score = func.calculate_score(dealer_cards)
+
+    func.print_final_score(player_cards, dealer_cards)
+    print(func.compare(player_score, dealer_score))
 
 
-while dealer_is_playing:
-
-    while dealer_score < 17:
-        dealer_cards.append(func.deal_card(cards))
-        dealer_score = sum(player_cards)
-    
-    if dealer_score > 21:
-        print("\nYou've won")
-        func.print_final_score(player_cards, player_score, dealer_cards, dealer_score)
-        dealer_is_playing = False
-    elif player_score == dealer_score:
-        print("\nDraw")
-        func.print_final_score(player_cards, player_score, dealer_cards, dealer_score)
-        dealer_is_playing = False
-    elif player_score < dealer_score:
-        print("\nDealer wins")
-        func.print_final_score(player_cards, player_score, dealer_cards, dealer_score)
-        dealer_is_playing = False
-    elif player_score > dealer_score:
-        print("\nYou've won")
-        func.print_final_score(player_cards, player_score, dealer_cards, dealer_score)
-        dealer_is_playing = False
-    else:
-        print("Error")
+while input("Do you want to play a game of Blackjack? Type 'y' or 'n'. ") == "y":
+    os.system('cls||clear')
+    play_game()
