@@ -35,7 +35,10 @@ with open("your-csvfile.csv") as data_file:
 # change the value in a list without
 # creating a loop and append the new value
 # new_list = [new_item for item in list]
+# new_list = [new_item for item in list if test]
 # new_dict = {key:new_value for key in dictionary}
+# new_dict = {key:new_value for key in dictionary if test}
+# new_dict = {new_key:new_value for (key, value) in dictionary.items()}
 
 # numbers = [1,2,3,4]
 # new_list = [n + 1 for n in numbers]
